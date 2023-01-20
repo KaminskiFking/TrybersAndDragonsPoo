@@ -4,10 +4,10 @@ import SimpleFighter from './SimpleFighter';
 export interface Fighter {
   lifePoints: number
   strength: number
-  defense: number
+  defense?: number
   energy?: Energy
   attack(enemy: Fighter | SimpleFighter): void
   special?(enemy: Fighter | SimpleFighter): void
-  levelUp(): void
+  levelUp?(): void
   receiveDamage(attackPoints: number): number;
 }
